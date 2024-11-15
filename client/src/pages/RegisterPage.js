@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const RegisterPage = () => {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
-
 	async function register(ev) {
 		ev.preventDefault();
 		const response = await fetch(

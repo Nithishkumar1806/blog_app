@@ -8,7 +8,8 @@ import RegisterPage from "./pages/RegisterPage";
 import { UserContextProvider } from "./context/UserContext";
 import PostPage from "./pages/PostPage";
 import EditPost from "./pages/EditPost";
-function App() {
+function App() 
+{
 	return (
 		<UserContextProvider>
 			<Routes>

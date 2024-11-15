@@ -21,14 +21,12 @@ const CreatePost = () => {
 		formData.append("file", files[0]);
 		formData.append("upload_preset", "blog-app");
 		formData.append("cloud_name", "sharonvijay");
-
 		const cloudinaryResponse = await fetch(cloudinaryUrl, {
 			method: "POST",
 			body: formData,
 		});
 
 		if (!cloudinaryResponse.ok) {
-			// Handle Cloudinary upload error
 			console.error("Error uploading image to Cloudinary");
 			return;
 		}
@@ -47,7 +45,7 @@ const CreatePost = () => {
 		const token = localStorage.getItem("authToken");
 
 		const headers = new Headers({
-			Authorization: `Bearer ${token}`, // Set the Authorization header with the token
+			Authorization: `Bearer ${token}`, 
 		});
 
 		const response = await fetch(

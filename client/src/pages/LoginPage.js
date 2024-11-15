@@ -35,10 +35,8 @@ const LoginPage = () => {
 		if (response.ok) {
 			const userInfo = await response.json();
 			console.log(userInfo.token);
-
 			// Store the user info in localStorage
 			localStorage.setItem("userInfo", JSON.stringify(userInfo));
-
 			// Store the authentication token in localStorage
 			localStorage.setItem("authToken", userInfo.token);
 
